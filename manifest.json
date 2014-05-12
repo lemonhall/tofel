@@ -1,0 +1,25 @@
+{
+  "name" : "TOFEL背单词",
+  "manifest_version": 2,
+  "version" : "0.1",
+  "description" : "TOFEL背单词",
+  "browser_action": {
+      "default_icon": "doubanicon-24.png",
+      "default_title": "TOFEL背单词"
+  },
+  "content_scripts" : [
+    {
+      "matches" : ["*://*/*"],
+      "js" : ["jquery-1.7.2.min.js","main.js"],
+      "run_at" : "document_end",
+      "all_frames" : false
+    }
+  ],
+    "permissions": [
+        "tabs",	
+        "*://*/*"
+    ],
+    "web_accessible_resources": [
+        "data_u.csv"
+    ]
+}
